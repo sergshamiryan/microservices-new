@@ -4,33 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d164a53-8792-463c-850a-54c67c737c6e" name="Changes" comment="Notification Service Added">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notificationService/src/main/java/com/example/notificationService/dto/OrderPlacedEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderService/dto/OrderPlacedEvent.java" afterDir="false" />
+    <list default="true" id="1d164a53-8792-463c-850a-54c67c737c6e" name="Changes" comment="Docker Compose was added but not working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notificationService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notificationService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notificationService/src/main/java/com/example/notificationservice/NotificationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificationService/src/main/java/com/example/notificationService/NotificationServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notificationService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notificationService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notificationService/src/test/java/com/example/notificationservice/NotificationServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificationService/src/test/java/com/example/notificationService/NotificationServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderservice/ControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderService/ControllerAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderservice/OrderServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderService/OrderServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderservice/config/WebClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderService/config/WebClientConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderservice/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderService/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderservice/dto/InventoryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderService/dto/InventoryResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderservice/dto/OrderLineItemsRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderService/dto/OrderLineItemsRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderservice/dto/OrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderService/dto/OrderRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderservice/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderService/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderservice/model/OrderLineItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderService/model/OrderLineItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderservice/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderService/repository/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderservice/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderService/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/orderService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/src/test/java/com/example/orderservice/OrderServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderService/src/test/java/com/example/orderService/OrderServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +167,7 @@
       <workItem from="1694083328339" duration="403000" />
       <workItem from="1694084003086" duration="2684000" />
       <workItem from="1694086703953" duration="365000" />
-      <workItem from="1694153867147" duration="13520000" />
+      <workItem from="1694153867147" duration="14122000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit without notificationService">
       <option name="closed" value="true" />
@@ -209,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694160691197</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Docker Compose was added but not working">
+      <option name="closed" value="true" />
+      <created>1694181318354</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1694181318354</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +213,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit without notificationService" />
     <MESSAGE value="Notification Service Added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Notification Service Added" />
+    <MESSAGE value="Docker Compose was added but not working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Docker Compose was added but not working" />
   </component>
 </project>
