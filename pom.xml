@@ -23,6 +23,7 @@
     <module>inventoryService</module>
     <module>discoveryServer</module>
     <module>api-gateway</module>
+    <module>notificationService</module>
   </modules>
 
   <properties>

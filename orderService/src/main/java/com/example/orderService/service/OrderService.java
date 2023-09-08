@@ -1,18 +1,20 @@
-package com.example.orderservice.service;
+package com.example.orderService.service;
 
-import com.example.orderservice.dto.InventoryResponse;
-import com.example.orderservice.dto.OrderLineItemsRequest;
-import com.example.orderservice.dto.OrderRequest;
-import com.example.orderservice.model.OrderLineItem;
-import com.example.orderservice.model.Order;
-import com.example.orderservice.repository.OrderRepository;
+import com.example.orderService.dto.InventoryResponse;
+import com.example.orderService.dto.OrderLineItemsRequest;
+import com.example.orderService.dto.OrderPlacedEvent;
+import com.example.orderService.dto.OrderRequest;
+import com.example.orderService.model.Order;
+import com.example.orderService.model.OrderLineItem;
+import com.example.orderService.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
-
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
@@ -20,7 +22,7 @@ public class OrderService {
 
     private final OrderRepository orderRepository;
     private final WebClient.Builder webClient;
-    private final KafkaTemplate<String,Map<String,String>> kafkaTemplate;
+    private final KafkaTemplate<String,OrderPlacedEvent> kafkaTemplate;
 
     public void placeOrder(OrderRequest orderRequest) {
         List<OrderLineItem> orderLineItems = orderRequest.orderLineItemsList().stream()
@@ -45,7 +47,7 @@ public class OrderService {
 
         if (arr.length > 0 && Arrays.stream(arr).allMatch(InventoryResponse::isInStock)) {
             orderRepository.save(order);
-            kafkaTemplate.send("notificationTopic", Collections.singletonMap("orderNumber", order.getOrderNumber()));
+            kafkaTemplate.send("notificationTopic", new OrderPlacedEvent(order.getOrderNumber()));
         } else {
             throw new IllegalArgumentException("Not in stock");
         }

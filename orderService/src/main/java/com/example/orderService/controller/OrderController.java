@@ -1,7 +1,7 @@
-package com.example.orderservice.controller;
+package com.example.orderService.controller;
 
-import com.example.orderservice.dto.OrderRequest;
-import com.example.orderservice.service.OrderService;
+import com.example.orderService.dto.OrderRequest;
+import com.example.orderService.service.OrderService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

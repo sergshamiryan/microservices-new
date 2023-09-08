@@ -1,4 +1,4 @@
-package com.example.orderservice;
+package com.example.orderService;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
