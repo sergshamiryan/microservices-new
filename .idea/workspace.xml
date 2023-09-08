@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d164a53-8792-463c-850a-54c67c737c6e" name="Changes" comment="Initial Commit without notificationService">
-      <change beforePath="$PROJECT_DIR$/productService/src/main/java/com/example/productservice/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/productService/src/main/java/com/example/productservice/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productService/src/main/java/com/example/productservice/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/productService/src/main/java/com/example/productservice/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/productService/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/productService/src/main/java/com/example/productservice/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/productService/src/main/java/com/example/productservice/service/ProductService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +38,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2V476mBaP7g5fIrgBTmVequlbTP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -47,16 +56,18 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "17",
     "last_opened_file_path": "C:/Users/sergey.shamiryan/IdeaProjects/microservices-learn/microservices-new/api-gateway",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.27701148",
+    "spring.configuration.checksum": "453e5ee88a2f142faee1fb2b1c45dc90",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -73,7 +84,7 @@
       <recent name="C:\Users\sergey.shamiryan\IdeaProjects\microservices-learn\microservices-new" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ProductServiceMicroserviceApplication">
+  <component name="RunManager" selected="Spring Boot.NotificationServiceApplication">
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.ApiGatewayApplication" />
@@ -95,6 +106,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NotificationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="notificationService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.notificationservice.NotificationServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OrderServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="orderService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.orderservice.OrderServiceApplication" />
@@ -109,12 +127,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductServiceMicroserviceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="productServiceMicroservice" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.productservicemicroservice.ProductServiceMicroserviceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -128,6 +143,7 @@
       <workItem from="1694083328339" duration="403000" />
       <workItem from="1694084003086" duration="2684000" />
       <workItem from="1694086703953" duration="365000" />
+      <workItem from="1694153867147" duration="6017000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit without notificationService">
       <option name="closed" value="true" />
