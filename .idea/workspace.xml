@@ -4,79 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d164a53-8792-463c-850a-54c67c737c6e" name="Changes" comment="Docker Compose was added but not working">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Inventory-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Inventory-service/src/main/resources/application-docker.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Inventory-service/src/main/resources/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application-docker.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application-docker.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/application-docker.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/resources/application-docker.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/realms/realm-export.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1d164a53-8792-463c-850a-54c67c737c6e" name="Changes" comment="Working Commit:&#10;At this point application is running all services fine,&#10;without&#10;DiscoveryServer security&#10;Circuit Breaker&#10;Distributed tracing&#10;Prometheus and Grafana">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryService/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Inventory-service/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Inventory-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryService/src/main/java/com/example/inventorservicemicroservice/InventorServiceMicroserviceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Inventory-service/src/main/java/com/example/inventorservicemicroservice/InventorServiceMicroserviceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryService/src/main/java/com/example/inventorservicemicroservice/conroller/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Inventory-service/src/main/java/com/example/inventorservicemicroservice/conroller/InventoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryService/src/main/java/com/example/inventorservicemicroservice/dto/InventoryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Inventory-service/src/main/java/com/example/inventorservicemicroservice/dto/InventoryResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryService/src/main/java/com/example/inventorservicemicroservice/model/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/Inventory-service/src/main/java/com/example/inventorservicemicroservice/model/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryService/src/main/java/com/example/inventorservicemicroservice/repository/InventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Inventory-service/src/main/java/com/example/inventorservicemicroservice/repository/InventoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryService/src/main/java/com/example/inventorservicemicroservice/service/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Inventory-service/src/main/java/com/example/inventorservicemicroservice/service/InventoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Inventory-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryService/src/test/java/com/example/inventorservicemicroservice/InventorServiceMicroserviceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Inventory-service/src/test/java/com/example/inventorservicemicroservice/InventorServiceMicroserviceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/.dockerignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Inventory-service/src/main/java/com/example/inventorservicemicroservice/conroller/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Inventory-service/src/main/java/com/example/inventorservicemicroservice/conroller/InventoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Inventory-service/src/main/java/com/example/inventorservicemicroservice/service/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Inventory-service/src/main/java/com/example/inventorservicemicroservice/service/InventoryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discoveryServer/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/discoveryServer/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/discoveryServer/src/main/java/com/example/discoveryserver/DiscoveryServerApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/discoveryServer/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/discoveryServer/src/test/java/com/example/discoveryserver/DiscoveryServerApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notificationService/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notificationService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notificationService/src/main/java/com/example/notificationService/NotificationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/example/notificationService/NotificationServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notificationService/src/main/java/com/example/notificationService/dto/OrderPlacedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/example/notificationService/dto/OrderPlacedEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notificationService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notificationService/src/test/java/com/example/notificationService/NotificationServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/test/java/com/example/notificationService/NotificationServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderService/ControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/ControllerAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderService/OrderServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/OrderServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderService/config/WebClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/config/WebClientConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderService/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderService/dto/InventoryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/dto/InventoryResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderService/dto/OrderLineItemsRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/dto/OrderLineItemsRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderService/dto/OrderPlacedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/dto/OrderPlacedEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderService/dto/OrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/dto/OrderRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderService/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderService/model/OrderLineItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/model/OrderLineItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderService/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/repository/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/src/main/java/com/example/orderService/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderService/src/test/java/com/example/orderService/OrderServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/test/java/com/example/orderService/OrderServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productService/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productService/src/main/java/com/example/productservice/ProductServiceMicroserviceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/example/productservice/ProductServiceMicroserviceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productService/src/main/java/com/example/productservice/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/example/productservice/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productService/src/main/java/com/example/productservice/dto/ProductRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/example/productservice/dto/ProductRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productService/src/main/java/com/example/productservice/dto/ProductResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/example/productservice/dto/ProductResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productService/src/main/java/com/example/productservice/model/Products.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/example/productservice/model/Products.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productService/src/main/java/com/example/productservice/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/example/productservice/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productService/src/main/java/com/example/productservice/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/example/productservice/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productService/src/test/java/com/example/productservicemicroservice/ProductServiceMicroserviceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/test/java/com/example/productservicemicroservice/ProductServiceMicroserviceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongo-data/WiredTiger.turtle" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/WiredTiger.turtle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongo-data/WiredTiger.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/WiredTiger.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongo-data/collection-2--4778920714270157492.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/collection-2--4778920714270157492.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongo-data/collection-4--4778920714270157492.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/collection-4--4778920714270157492.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongo-data/diagnostic.data/metrics.2023-09-10T10-53-36Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/diagnostic.data/metrics.2023-09-10T10-53-36Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongo-data/diagnostic.data/metrics.interim" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/diagnostic.data/metrics.interim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongo-data/index-3--4778920714270157492.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/index-3--4778920714270157492.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongo-data/index-5--4778920714270157492.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/index-5--4778920714270157492.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongo-data/index-6--4778920714270157492.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/index-6--4778920714270157492.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongo-data/journal/WiredTigerLog.0000000023" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongo-data/sizeStorer.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/sizeStorer.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql_keycloak_data/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/mysql_keycloak_data/ib_buffer_pool" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql_keycloak_data/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/mysql_keycloak_data/ib_logfile0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql_keycloak_data/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/mysql_keycloak_data/ibdata1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql_keycloak_data/ibtmp1" beforeDir="false" afterPath="$PROJECT_DIR$/mysql_keycloak_data/ibtmp1" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +120,7 @@
       <recent name="com.example.notificationservice.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml.product-service: Compose Deployment">
+  <component name="RunManager" selected="Spring Boot.InventorServiceMicroserviceApplication">
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.ApiGatewayApplication" />
@@ -312,7 +259,7 @@
       <workItem from="1694202483191" duration="46074000" />
       <workItem from="1694313415881" duration="10827000" />
       <workItem from="1694337439035" duration="6813000" />
-      <workItem from="1694344296428" duration="5712000" />
+      <workItem from="1694344296428" duration="12499000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit without notificationService">
       <option name="closed" value="true" />
@@ -338,7 +285,42 @@
       <option name="project" value="LOCAL" />
       <updated>1694181318354</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Working Commit:&#10;At this point application is running all services fine,&#10;without&#10;DiscoveryServer security&#10;Circuit Breaker&#10;Distributed tracing&#10;Prometheus and Grafana">
+      <created>1694350727595</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1694350727595</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Working Commit:&#10;At this point application is running all services fine,&#10;without&#10;DiscoveryServer security&#10;Circuit Breaker&#10;Distributed tracing&#10;Prometheus and Grafana">
+      <created>1694350750907</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1694350750907</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Working Commit:&#10;At this point application is running all services fine,&#10;without&#10;DiscoveryServer security&#10;Circuit Breaker&#10;Distributed tracing&#10;Prometheus and Grafana">
+      <created>1694350839180</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1694350839180</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Working Commit:&#10;At this point application is running all services fine,&#10;without&#10;DiscoveryServer security&#10;Circuit Breaker&#10;Distributed tracing&#10;Prometheus and Grafana">
+      <created>1694350905801</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1694350905801</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Working Commit:&#10;At this point application is running all services fine,&#10;without&#10;DiscoveryServer security&#10;Circuit Breaker&#10;Distributed tracing&#10;Prometheus and Grafana">
+      <created>1694350920697</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1694350920697</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,7 +358,8 @@
     <MESSAGE value="Initial Commit without notificationService" />
     <MESSAGE value="Notification Service Added" />
     <MESSAGE value="Docker Compose was added but not working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Docker Compose was added but not working" />
+    <MESSAGE value="Working Commit:&#10;At this point application is running all services fine,&#10;without&#10;DiscoveryServer security&#10;Circuit Breaker&#10;Distributed tracing&#10;Prometheus and Grafana" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working Commit:&#10;At this point application is running all services fine,&#10;without&#10;DiscoveryServer security&#10;Circuit Breaker&#10;Distributed tracing&#10;Prometheus and Grafana" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -21,4 +21,7 @@ public class InventoryService {
                 .toList();
     }
 
+    public List<Inventory> getAllStocks() {
+        return inventoryRepository.findAll();
+    }
 }
