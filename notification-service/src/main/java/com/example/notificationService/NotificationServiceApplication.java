@@ -1,11 +1,10 @@
 package com.example.notificationService;
 
+import com.example.notificationService.dto.OrderPlacedEvent;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.kafka.annotation.KafkaListener;
-
-import java.util.Map;
 
 
 @SpringBootApplication
@@ -18,10 +17,10 @@ public class NotificationServiceApplication {
 
     }
 
-    @KafkaListener(topics = "notificationType")
-    public void handleNotification(Map<String, Object> orderPlacedEvent) {
+    @KafkaListener(topics = "notificationTopic")
+    public void handleNotification(OrderPlacedEvent orderPlacedEvent) {
         //email notification
-        log.info("Received Notification For Order - {} ", orderPlacedEvent.get("orderNumber"));
+        log.info("Received Notification For Order - {} ", orderPlacedEvent.orderNumber());
     }
 
 }
