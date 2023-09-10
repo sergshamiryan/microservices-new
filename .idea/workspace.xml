@@ -6,24 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="1d164a53-8792-463c-850a-54c67c737c6e" name="Changes" comment="Working Commit:&#10;At this point application is running all services fine,&#10;without&#10;DiscoveryServer security&#10;Circuit Breaker&#10;Distributed tracing&#10;Prometheus and Grafana">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Inventory-service/src/main/java/com/example/inventorservicemicroservice/conroller/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Inventory-service/src/main/java/com/example/inventorservicemicroservice/conroller/InventoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Inventory-service/src/main/java/com/example/inventorservicemicroservice/service/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Inventory-service/src/main/java/com/example/inventorservicemicroservice/service/InventoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongo-data/WiredTiger.turtle" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/WiredTiger.turtle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongo-data/WiredTiger.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/WiredTiger.wt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongo-data/collection-2--4778920714270157492.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/collection-2--4778920714270157492.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongo-data/collection-4--4778920714270157492.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/collection-4--4778920714270157492.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongo-data/diagnostic.data/metrics.2023-09-10T10-53-36Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/diagnostic.data/metrics.2023-09-10T10-53-36Z-00000" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongo-data/diagnostic.data/metrics.interim" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/diagnostic.data/metrics.interim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongo-data/index-3--4778920714270157492.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/index-3--4778920714270157492.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongo-data/index-5--4778920714270157492.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/index-5--4778920714270157492.wt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongo-data/index-6--4778920714270157492.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/index-6--4778920714270157492.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongo-data/journal/WiredTigerLog.0000000023" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mongo-data/sizeStorer.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/sizeStorer.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql_keycloak_data/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/mysql_keycloak_data/ib_buffer_pool" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysql_keycloak_data/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/mysql_keycloak_data/ib_logfile0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysql_keycloak_data/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/mysql_keycloak_data/ibdata1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysql_keycloak_data/ibtmp1" beforeDir="false" afterPath="$PROJECT_DIR$/mysql_keycloak_data/ibtmp1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/dto/OrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/dto/OrderRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/example/productservice/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/example/productservice/service/ProductService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +93,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.13693899",
+    "settings.editor.selected.configurable": "editor.preferences.tabs",
     "spring.configuration.checksum": "e60de8e4e16f510ca582b24ed194eaa8",
     "vue.rearranger.settings.migration": "true"
   }
@@ -120,7 +117,7 @@
       <recent name="com.example.notificationservice.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.InventorServiceMicroserviceApplication">
+  <component name="RunManager" selected="Spring Boot.OrderServiceApplication">
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.ApiGatewayApplication" />
@@ -174,14 +171,6 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <configuration name="docker-compose.yml.api-gateway: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -195,12 +184,12 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.broker: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker-compose.yml.inventory-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="broker" />
+              <option value="inventory-service" />
             </list>
           </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
@@ -208,12 +197,25 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.discovery-server: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker-compose.yml.notification-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="discovery-server" />
+              <option value="notification-service" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.order-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="order-service" />
             </list>
           </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
@@ -236,11 +238,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml.inventory-service: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.product-service: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.notification-service: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.order-service: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.api-gateway: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.discovery-server: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.broker: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -259,7 +261,7 @@
       <workItem from="1694202483191" duration="46074000" />
       <workItem from="1694313415881" duration="10827000" />
       <workItem from="1694337439035" duration="6813000" />
-      <workItem from="1694344296428" duration="12499000" />
+      <workItem from="1694344296428" duration="20346000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit without notificationService">
       <option name="closed" value="true" />
@@ -320,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694350920697</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Working Commit:&#10;At this point application is running all services fine,&#10;without&#10;DiscoveryServer security&#10;Circuit Breaker&#10;Distributed tracing&#10;Prometheus and Grafana">
+      <created>1694357504245</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1694357504246</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

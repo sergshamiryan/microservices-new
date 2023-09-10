@@ -8,44 +8,35 @@ import com.example.orderService.model.Order;
 import com.example.orderService.model.OrderLineItem;
 import com.example.orderService.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class OrderService {
 
     private final OrderRepository orderRepository;
     private final WebClient.Builder webClient;
-    private final KafkaTemplate<String,OrderPlacedEvent> kafkaTemplate;
+    private final KafkaTemplate<String, OrderPlacedEvent> kafkaTemplate;
 
     public void placeOrder(OrderRequest orderRequest) {
-        List<OrderLineItem> orderLineItems = orderRequest.orderLineItemsList().stream()
-                .map(this::mapToDto)
-                .toList();
+        List<OrderLineItem> orderLineItems = orderRequest.orderLineItemsList().stream().map(this::mapToDto).toList();
 
-        Order order = Order.builder()
-                .orderNumber(UUID.randomUUID().toString())
-                .orderLineItemList(orderLineItems).build();
+        Order order = Order.builder().orderNumber(UUID.randomUUID().toString()).orderLineItemList(orderLineItems).build();
 
-        List<String> skuCodes = orderLineItems.stream()
-                .map(OrderLineItem::getSkuCode)
-                .toList();
+        List<String> skuCodes = orderLineItems.stream().map(OrderLineItem::getSkuCode).toList();
 
 
-        InventoryResponse[] arr = webClient.build().get()
-                .uri("http://inventory-service/api/inventory", uriBuilder -> uriBuilder.queryParam("sku-code", skuCodes).build())
-                .retrieve()
-                .bodyToMono(InventoryResponse[].class)
-                .block();
+        InventoryResponse[] arr = webClient.build().get().uri("http://inventory-service/api/inventory", uriBuilder -> uriBuilder.queryParam("sku-code", skuCodes).build()).retrieve().bodyToMono(InventoryResponse[].class).block();
 
 
-        if (arr.length > 0 && Arrays.stream(arr).allMatch(InventoryResponse::isInStock)) {
+        if (arr.length > 0 && arr.length == skuCodes.size()) {
             orderRepository.save(order);
             kafkaTemplate.send("notificationTopic", new OrderPlacedEvent(order.getOrderNumber()));
         } else {
@@ -56,10 +47,7 @@ public class OrderService {
     }
 
     private OrderLineItem mapToDto(OrderLineItemsRequest orderLineItemsRequest) {
-        return OrderLineItem.builder()
-                .price(orderLineItemsRequest.price())
-                .quantity(orderLineItemsRequest.quantity())
-                .skuCode(orderLineItemsRequest.skuCode()).build();
+        return OrderLineItem.builder().price(orderLineItemsRequest.price()).quantity(orderLineItemsRequest.quantity()).skuCode(orderLineItemsRequest.skuCode()).build();
     }
 
 
