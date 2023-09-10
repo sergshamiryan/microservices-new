@@ -2,7 +2,7 @@ version: '3'
 services:
 
 
-  ## MySQL Docker Compose Config
+  ## SQL Docker Compose Config
   postgres-order:
     container_name: postgres-order
     image: postgres
@@ -24,7 +24,7 @@ services:
     container_name: postgres-inventory
     image: postgres
     environment:
-      POSTGRES_DB: inventory-service
+      POSTGRES_DB: inventory_service
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin
       PGDATA: /data/postgres
@@ -57,7 +57,7 @@ services:
       MYSQL_DATABASE: keycloak
       MYSQL_USER: admin
       MYSQL_PASSWORD: admin
-      
+
   keycloak:
     container_name: keycloak
     image: quay.io/keycloak/keycloak:18.0.0
@@ -104,18 +104,18 @@ services:
 
   ## Eureka Server
   discovery-server:
-    image: microservices-new/discovery-server:latest
+    image: sergshamriyan/discovery-server
     container_name: discovery-server
     ports:
-      - "8761:8761"
+      - "8889:8761"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
 
   api-gateway:
-    image: microservices-learn/api-gateway:latest
+    image: sergshamriyan/api-gateway
     container_name: api-gateway
     ports:
-      - "8181:8080"
+      - "8181:8083"
     expose:
       - "8181"
     environment:
@@ -128,7 +128,9 @@ services:
   ## Product-Service Docker Compose Config
   product-service:
     container_name: product-service
-    image: microservices-learn/product-service:latest
+    image: sergshamriyan/product-service
+    ports:
+      - "9595:9090"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
     depends_on:
@@ -139,10 +141,13 @@ services:
   ## Order-Service Docker Compose Config
   order-service:
     container_name: order-service
-    image: microservices-learn/order-service:latest
+    image: sergshamriyan/order-service
+    ports:
+      - "8081:8081"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-order:5431/order-service
+    #      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-order:5431/order-service
+    #    Code above means override settings even if they are written in  properties
     depends_on:
       - postgres-order
       - broker
@@ -152,10 +157,13 @@ services:
   ## Inventory-Service Docker Compose Config
   inventory-service:
     container_name: inventory-service
-    image: microservices-learn/inventory-service:latest
+    image: sergshamriyan/inventory-service
+    ports:
+      - "9494:9494"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-inventory:5432/inventory-service
+    #      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-inventory:5432/inventory-service
+    #    Code above means override settings even if they are written in  properties
     depends_on:
       - postgres-inventory
       - discovery-server
@@ -164,39 +172,12 @@ services:
   ## Notification-Service Docker Compose Config
   notification-service:
     container_name: notification-service
-    image: microservices-learn/notification-service:latest
+    image: sergshamriyan/notification-service
+    ports:
+      - "8585:8585"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
     depends_on:
       - broker
       - discovery-server
       - api-gateway
-
-  ## Prometheus
-  prometheus:
-    image: prom/prometheus:v2.37.1
-    container_name: prometheus
-    restart: always
-    ports:
-      - "9090:9090"
-    volumes:
-      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
-    depends_on:
-      - product-service
-      - inventory-service
-      - order-service
-      - notification-service
-
-  grafana:
-    image: grafana/grafana-oss:8.5.2
-    container_name: grafana
-    restart: always
-    ports:
-      - "3000:3000"
-    links:
-      - prometheus:prometheus
-    volumes:
-      - ./grafana:/var/lib/grafana
-    environment:
-      - GF_SECURITY_ADMIN_USER=admin
-      - GF_SECURITY_ADMIN_PASSWORD=admin
