@@ -33,7 +33,10 @@ public class OrderService {
         List<String> skuCodes = orderLineItems.stream().map(OrderLineItem::getSkuCode).toList();
 
 
-        InventoryResponse[] arr = webClient.build().get().uri("http://inventory-service/api/inventory", uriBuilder -> uriBuilder.queryParam("sku-code", skuCodes).build()).retrieve().bodyToMono(InventoryResponse[].class).block();
+        InventoryResponse[] arr = webClient.build()
+                .get()
+                .uri("http://inventory-service/api/inventory", uriBuilder -> uriBuilder.queryParam("sku-code", skuCodes).build())
+                .retrieve().bodyToMono(InventoryResponse[].class).block();
 
 
         if (arr.length > 0 && arr.length == skuCodes.size()) {

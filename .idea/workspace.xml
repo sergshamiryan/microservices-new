@@ -4,22 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d164a53-8792-463c-850a-54c67c737c6e" name="Changes" comment="Working Commit:&#10;At this point application is running all services fine,&#10;without&#10;DiscoveryServer security&#10;Circuit Breaker&#10;Distributed tracing&#10;Prometheus and Grafana">
+    <list default="true" id="1d164a53-8792-463c-850a-54c67c737c6e" name="Changes" comment="Working Commit:&#10;Changed docker-compose.yml for creating local images">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongo-data/WiredTiger.turtle" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/WiredTiger.turtle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongo-data/WiredTiger.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/WiredTiger.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongo-data/collection-2--4778920714270157492.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/collection-2--4778920714270157492.wt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongo-data/diagnostic.data/metrics.interim" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/diagnostic.data/metrics.interim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongo-data/index-3--4778920714270157492.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/index-3--4778920714270157492.wt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongo-data/index-6--4778920714270157492.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/index-6--4778920714270157492.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongo-data/sizeStorer.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/sizeStorer.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql_keycloak_data/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/mysql_keycloak_data/ib_logfile0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql_keycloak_data/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/mysql_keycloak_data/ibdata1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql_keycloak_data/ibtmp1" beforeDir="false" afterPath="$PROJECT_DIR$/mysql_keycloak_data/ibtmp1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/dto/OrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/dto/OrderRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/repository/OrderRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/example/productservice/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/example/productservice/service/ProductService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,7 +254,7 @@
       <workItem from="1694202483191" duration="46074000" />
       <workItem from="1694313415881" duration="10827000" />
       <workItem from="1694337439035" duration="6813000" />
-      <workItem from="1694344296428" duration="20346000" />
+      <workItem from="1694344296428" duration="24571000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit without notificationService">
       <option name="closed" value="true" />
@@ -329,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694357504246</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Working Commit:&#10;Changed docker-compose.yml for creating local images">
+      <created>1694371164449</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1694371164449</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,7 +368,9 @@
     <MESSAGE value="Notification Service Added" />
     <MESSAGE value="Docker Compose was added but not working" />
     <MESSAGE value="Working Commit:&#10;At this point application is running all services fine,&#10;without&#10;DiscoveryServer security&#10;Circuit Breaker&#10;Distributed tracing&#10;Prometheus and Grafana" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working Commit:&#10;At this point application is running all services fine,&#10;without&#10;DiscoveryServer security&#10;Circuit Breaker&#10;Distributed tracing&#10;Prometheus and Grafana" />
+    <MESSAGE value="Working Commit:&#10;Changed Dockerfile for creating local images" />
+    <MESSAGE value="Working Commit:&#10;Changed docker-compose.yml for creating local images" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working Commit:&#10;Changed docker-compose.yml for creating local images" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
