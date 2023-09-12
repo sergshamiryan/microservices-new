@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d164a53-8792-463c-850a-54c67c737c6e" name="Changes" comment="Docker Compose was added but not working">
-      <change afterPath="$PROJECT_DIR$/order-service/src/test/java/com/example/orderService/service/OrderServiceTest.java" afterDir="false" />
+    <list default="true" id="1d164a53-8792-463c-850a-54c67c737c6e" name="Changes" comment="Added tests dependencies for order-service">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongo-data/WiredTiger.lock" beforeDir="false" afterPath="$PROJECT_DIR$/mongo-data/WiredTiger.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql_keycloak_data/auto.cnf" beforeDir="false" afterPath="$PROJECT_DIR$/mysql_keycloak_data/auto.cnf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql_keycloak_data/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/mysql_keycloak_data/ib_logfile0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql_keycloak_data/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/mysql_keycloak_data/ibdata1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql_keycloak_data/ibtmp1" beforeDir="false" afterPath="$PROJECT_DIR$/mysql_keycloak_data/ibtmp1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/config/WebClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/config/WebClientConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/example/orderService/service/OrderServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/test/java/com/example/orderService/service/OrderServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +74,7 @@
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "master__office",
     "jdk.selected.JAVA_MODULE": "17",
     "last_opened_file_path": "C:/Users/sergey.shamiryan/IdeaProjects/microservices-learn/microservices-new/api-gateway",
     "node.js.detected.package.eslint": "true",
@@ -92,7 +85,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.27701148",
-    "spring.configuration.checksum": "1cd54e81821269eef2506fd39ea4dcfc",
+    "spring.configuration.checksum": "db9a84b4baab7b5a40e6d7bc8edaa56d",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -122,6 +115,38 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.OrderServiceTest.shouldPlaceOrderIfInStack">
+    <configuration name="OrderServiceTest.getOrders" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="order-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.orderService.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.orderService.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.orderService.service.OrderServiceTest" />
+      <option name="METHOD_NAME" value="getOrders" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderServiceTest.shouldGetOrders" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="order-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.orderService.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.orderService.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.orderService.service.OrderServiceTest" />
+      <option name="METHOD_NAME" value="shouldGetOrders" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OrderServiceTest.shouldPlaceOrderIfInStack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="order-service" />
       <extension name="coverage">
@@ -194,6 +219,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.OrderServiceTest.shouldPlaceOrderIfInStack" />
+        <item itemvalue="JUnit.OrderServiceTest.shouldGetOrders" />
+        <item itemvalue="JUnit.OrderServiceTest.getOrders" />
       </list>
     </recent_temporary>
   </component>
@@ -209,7 +236,10 @@
       <workItem from="1694084003086" duration="2684000" />
       <workItem from="1694086703953" duration="365000" />
       <workItem from="1694153867147" duration="14122000" />
-      <workItem from="1694412891724" duration="13568000" />
+      <workItem from="1694412891724" duration="24508000" />
+      <workItem from="1694524660092" duration="7000" />
+      <workItem from="1694524812447" duration="41000" />
+      <workItem from="1694525000336" duration="2666000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit without notificationService">
       <option name="closed" value="true" />
@@ -235,7 +265,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694181318354</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added tests dependencies for order-service">
+      <option name="closed" value="true" />
+      <created>1694440931434</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1694440931434</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,17 +294,7 @@
     <MESSAGE value="Initial Commit without notificationService" />
     <MESSAGE value="Notification Service Added" />
     <MESSAGE value="Docker Compose was added but not working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Docker Compose was added but not working" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/order-service/src/main/java/com/example/orderService/service/OrderService.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Added tests dependencies for order-service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added tests dependencies for order-service" />
   </component>
 </project>
