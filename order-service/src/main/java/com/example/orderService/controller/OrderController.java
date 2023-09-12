@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URISyntaxException;
 import java.util.List;
 
 @RestController
@@ -19,7 +20,7 @@ public class OrderController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public String placeOrder(@Valid @RequestBody OrderRequest orderRequest) {
+    public String placeOrder(@Valid @RequestBody OrderRequest orderRequest) throws URISyntaxException {
         orderService.placeOrder(orderRequest);
         return "Order placed successfully";
     }

@@ -7,7 +7,8 @@ import com.example.orderService.dto.OrderRequest;
 import com.example.orderService.model.Order;
 import com.example.orderService.model.OrderLineItem;
 import com.example.orderService.repository.OrderRepository;
-import jakarta.ws.rs.core.UriBuilder;
+
+import org.apache.http.client.utils.URIBuilder;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -19,7 +20,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
 import java.math.BigDecimal;
-import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -73,7 +74,7 @@ class OrderServiceTest {
 
     @Test
     @DisplayName("If at least one item isn`t in stock the test will fail")
-    void shouldPlaceOrderIfInStack() {
+    void shouldPlaceOrderIfInStack() throws URISyntaxException {
         OrderLineItemsRequest orderLineItemsRequest = new OrderLineItemsRequest(1l, "iphone_13", new BigDecimal(100), 1);
         OrderLineItemsRequest orderLineItemsRequest2 = new OrderLineItemsRequest(1l, "iphone_13_pro", new BigDecimal(100), 1);
 
@@ -87,13 +88,13 @@ class OrderServiceTest {
 
         when(webClientMock.get())
                 .thenReturn(requestHeadersUriSpecMock);
-        List<String> skuCodes = new ArrayList<>();
-        skuCodes.add(orderLineItemsRequest.skuCode());
-        skuCodes.add(orderLineItemsRequest2.skuCode());
 
-        String url = UriBuilder.fromUri(URI.create("http://inventory-service/api/inventory")).queryParam("sku-code", skuCodes).toString();
 
-        when(requestHeadersUriSpecMock.uri(url))
+        URIBuilder uri = new URIBuilder("http://inventory-service/api/inventory");
+        uri.addParameter("sku-code",orderLineItemsRequest.skuCode());
+        uri.addParameter("sku-code",orderLineItemsRequest2.skuCode());
+
+        when(requestHeadersUriSpecMock.uri(uri.build()))
                 .thenReturn(requestHeadersSpecMock);
         when(requestHeadersSpecMock.retrieve())
                 .thenReturn(responseSpecMock);
