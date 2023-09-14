@@ -7,7 +7,9 @@ import com.example.productservice.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -21,8 +23,10 @@ public class ProductController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void createProduct(@RequestBody ProductRequest productRequest) {
-        productService.createProduct(productRequest);
+    public void createProduct(@RequestPart ProductRequest productRequest,
+                              @RequestPart(required = false) MultipartFile image) throws IOException {
+
+        productService.createProduct(productRequest, image);
     }
 
     @GetMapping
@@ -30,5 +34,6 @@ public class ProductController {
     public List<ProductResponse> getAllProducts() {
         return productService.getAllProducts();
     }
+
 
 }

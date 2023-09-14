@@ -7,8 +7,11 @@ import com.example.productservice.model.Products;
 import com.example.productservice.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 
 @Service
@@ -16,14 +19,15 @@ import java.util.List;
 @Slf4j
 public class ProductService {
 
-
+    private final MongoTemplate mongoTemplate;
     private final ProductRepository productRepository;
 
 
-    public void createProduct(ProductRequest productRequest) {
+    public void createProduct(ProductRequest productRequest, MultipartFile image) throws IOException {
         Products product = Products.builder()
                 .name(productRequest.name())
                 .description(productRequest.description())
+                .image(image.getBytes())
                 .price(productRequest.price())
                 .build();
 
@@ -40,6 +44,7 @@ public class ProductService {
         return new ProductResponse(product.getId(),
                 product.getName(),
                 product.getDescription(),
-                product.getPrice());
+                product.getPrice(),
+                product.getImage());
     }
 }

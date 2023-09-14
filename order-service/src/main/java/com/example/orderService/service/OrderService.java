@@ -1,12 +1,10 @@
 package com.example.orderService.service;
 
-import com.example.orderService.dto.InventoryResponse;
-import com.example.orderService.dto.OrderLineItemsRequest;
-import com.example.orderService.dto.OrderPlacedEvent;
-import com.example.orderService.dto.OrderRequest;
+import com.example.orderService.dto.*;
 import com.example.orderService.model.Order;
 import com.example.orderService.model.OrderLineItem;
 import com.example.orderService.repository.OrderRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.client.utils.URIBuilder;
@@ -41,10 +39,9 @@ public class OrderService {
         }
 
 
-        InventoryResponse[] arr = webClient
-                .get()
-                .uri(uri.build())
-                .retrieve().bodyToMono(InventoryResponse[].class).block();
+        InventoryResponse[] arr = webClient.get()
+//                .uri("",uriBuilder -> uriBuilder.queryParam("sku-code",skuCodes).build())
+                .uri(uri.build()).retrieve().bodyToMono(InventoryResponse[].class).block();
 
 
         if (arr.length > 0 && arr.length == skuCodes.size()) {
@@ -64,5 +61,14 @@ public class OrderService {
 
     public List<Order> getOrders() {
         return orderRepository.findAll();
+    }
+
+    @Transactional
+    public OrderDto getOrderById(Long id) {
+        Order order1  = orderRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Wrong id"));
+        OrderDto orderDto  = new OrderDto(order1.getId(),order1.getOrderNumber());
+
+        return orderDto;
     }
 }

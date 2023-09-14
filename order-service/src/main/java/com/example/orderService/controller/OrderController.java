@@ -1,5 +1,6 @@
 package com.example.orderService.controller;
 
+import com.example.orderService.dto.OrderDto;
 import com.example.orderService.dto.OrderRequest;
 import com.example.orderService.model.Order;
 import com.example.orderService.service.OrderService;
@@ -29,6 +30,12 @@ public class OrderController {
     @ResponseStatus(HttpStatus.OK)
     public List<Order> getOrders() {
         return orderService.getOrders();
+    }
+
+    @GetMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public OrderDto  getOrderById(@PathVariable Long id) {
+        return orderService.getOrderById(id);
     }
 
 }

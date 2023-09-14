@@ -1,13 +1,9 @@
 package com.example.orderService.service;
 
-import com.example.orderService.dto.InventoryResponse;
-import com.example.orderService.dto.OrderLineItemsRequest;
-import com.example.orderService.dto.OrderPlacedEvent;
-import com.example.orderService.dto.OrderRequest;
+import com.example.orderService.dto.*;
 import com.example.orderService.model.Order;
 import com.example.orderService.model.OrderLineItem;
 import com.example.orderService.repository.OrderRepository;
-
 import org.apache.http.client.utils.URIBuilder;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -23,8 +19,11 @@ import java.math.BigDecimal;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 
@@ -42,13 +41,12 @@ class OrderServiceTest {
     private WebClient webClientMock = Mockito.mock(WebClient.class);
 
     private WebClient.RequestHeadersSpec requestHeadersSpecMock = Mockito.mock(WebClient.RequestHeadersSpec.class);
-    ;
+
     @Mock
     private WebClient.RequestHeadersUriSpec requestHeadersUriSpecMock = Mockito.mock(WebClient.RequestHeadersUriSpec.class);
-    ;
+
     @Mock
     private WebClient.ResponseSpec responseSpecMock = Mockito.mock(WebClient.ResponseSpec.class);
-    ;
 
 
     @BeforeEach
@@ -86,25 +84,37 @@ class OrderServiceTest {
         inventoryResponses[0] = new InventoryResponse("iphone_13_as", true);
         inventoryResponses[1] = new InventoryResponse("iphone_13_pros", false);
 
-        when(webClientMock.get())
-                .thenReturn(requestHeadersUriSpecMock);
+        when(webClientMock.get()).thenReturn(requestHeadersUriSpecMock);
 
 
         URIBuilder uri = new URIBuilder("http://inventory-service/api/inventory");
-        uri.addParameter("sku-code",orderLineItemsRequest.skuCode());
-        uri.addParameter("sku-code",orderLineItemsRequest2.skuCode());
+        uri.addParameter("sku-code", orderLineItemsRequest.skuCode());
+        uri.addParameter("sku-code", orderLineItemsRequest2.skuCode());
 
-        when(requestHeadersUriSpecMock.uri(uri.build()))
-                .thenReturn(requestHeadersSpecMock);
-        when(requestHeadersSpecMock.retrieve())
-                .thenReturn(responseSpecMock);
-        when(responseSpecMock.bodyToMono(InventoryResponse[].class))
-                .thenReturn(Mono.just(inventoryResponses));
+
+        when(requestHeadersUriSpecMock.uri(uri.build())).thenReturn(requestHeadersSpecMock);
+        when(requestHeadersSpecMock.retrieve()).thenReturn(responseSpecMock);
+        when(responseSpecMock.bodyToMono(InventoryResponse[].class)).thenReturn(Mono.just(inventoryResponses));
 
 
         OrderRequest orderRequest = new OrderRequest(orderLineItemsRequestList);
 
         assertDoesNotThrow(() -> orderService.placeOrder(orderRequest));
+    }
+
+    @Test
+    void shouldGetObjectById() {
+        long id = 1l;
+        Order order = new Order(1l, "ass", null);
+        OrderDto expectedOrderDto = new OrderDto(order.getId(), order.getOrderNumber());
+
+        when(orderRepository.findById(id)).thenReturn(Optional.of(order));
+        OrderDto actualOrderDto = orderService.getOrderById(id);
+
+        assertEquals(actualOrderDto, expectedOrderDto);
+
+//      Verifies if method was called by the right id
+        verify(orderRepository).findById(id);
     }
 
 
