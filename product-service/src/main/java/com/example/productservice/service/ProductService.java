@@ -18,8 +18,6 @@ import java.util.List;
 @RequiredArgsConstructor
 @Slf4j
 public class ProductService {
-
-    private final MongoTemplate mongoTemplate;
     private final ProductRepository productRepository;
 
 

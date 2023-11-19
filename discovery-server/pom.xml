@@ -9,6 +9,7 @@
 
     <artifactId>discovery-server</artifactId>
     <packaging>jar</packaging>
+    <version>1.0</version>
 
     <name>discoveryServer</name>
     <url>http://maven.apache.org</url>

@@ -16,16 +16,13 @@ import java.util.List;
 @RequestMapping("/api/products")
 @RequiredArgsConstructor
 public class ProductController {
-
-
     private final ProductService productService;
-
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void createProduct(@RequestPart ProductRequest productRequest,
-                              @RequestPart(required = false) MultipartFile image) throws IOException {
-
+                              @RequestPart(required = false) MultipartFile image
+    ) throws IOException {
         productService.createProduct(productRequest, image);
     }
 
@@ -34,6 +31,4 @@ public class ProductController {
     public List<ProductResponse> getAllProducts() {
         return productService.getAllProducts();
     }
-
-
 }

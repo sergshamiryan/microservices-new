@@ -1,7 +1,6 @@
 version: '3'
 services:
 
-
   ## SQL Docker Compose Config
   postgres-order:
     container_name: postgres-order
@@ -104,17 +103,15 @@ services:
 
   ## Eureka Server
   discovery-server:
-    build: ./discovery-server
-    image: discovery-server
+    image: sergshamriyan/discovery-server
     container_name: discovery-server
     ports:
-      - "8889:8761"
+      - "8761:8761"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
 
   api-gateway:
-    build: ./api-gateway
-    image: api-gateway
+    image: sergshamriyan/api-gateway
     container_name: api-gateway
     ports:
       - "8181:8083"
@@ -129,9 +126,8 @@ services:
 
   ## Product-Service Docker Compose Config
   product-service:
-    build: ./product-service
     container_name: product-service
-    image: product-service
+    image: sergshamriyan/product-service
     ports:
       - "9595:9090"
     environment:
@@ -143,9 +139,8 @@ services:
 
   ## Order-Service Docker Compose Config
   order-service:
-    build: ./order-service
     container_name: order-service
-    image: order-service
+    image: sergshamriyan/order-service
     ports:
       - "8081:8081"
     environment:
@@ -160,9 +155,8 @@ services:
 
   ## Inventory-Service Docker Compose Config
   inventory-service:
-    build: ./Inventory-service
     container_name: inventory-service
-    image: inventory-service
+    image: sergshamriyan/inventory-service
     ports:
       - "9494:9494"
     environment:
@@ -176,9 +170,9 @@ services:
 
   ## Notification-Service Docker Compose Config
   notification-service:
-    build: ./notification-service
+#    build: ./notification-service
     container_name: notification-service
-    image: notification-service
+    image: sergshamriyan/notification-service
     ports:
       - "8585:8585"
     environment:

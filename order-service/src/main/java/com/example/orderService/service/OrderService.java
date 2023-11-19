@@ -1,6 +1,10 @@
 package com.example.orderService.service;
 
-import com.example.orderService.dto.*;
+import com.example.orderService.dto.InventoryResponse;
+import com.example.orderService.dto.OrderLineItemsRequest;
+import com.example.orderService.dto.OrderPlacedEvent;
+import com.example.orderService.dto.OrderRequest;
+import com.example.orderService.dto.mapperInterfaces.OrderDTOMapper;
 import com.example.orderService.model.Order;
 import com.example.orderService.model.OrderLineItem;
 import com.example.orderService.repository.OrderRepository;
@@ -23,6 +27,7 @@ public class OrderService {
 
     private final OrderRepository orderRepository;
     private final WebClient webClient;
+    private final OrderDTOMapper orderDTOMapper;
     private final KafkaTemplate<String, OrderPlacedEvent> kafkaTemplate;
 
     public void placeOrder(OrderRequest orderRequest) throws URISyntaxException {
@@ -64,11 +69,10 @@ public class OrderService {
     }
 
     @Transactional
-    public OrderDto getOrderById(Long id) {
-        Order order1  = orderRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Wrong id"));
-        OrderDto orderDto  = new OrderDto(order1.getId(),order1.getOrderNumber());
-
-        return orderDto;
+    public Order getOrderById(Long id) {
+        Order order = orderRepository.findById2(id);
+        return order;
     }
+
 }
+

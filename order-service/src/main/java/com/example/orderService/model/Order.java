@@ -1,5 +1,8 @@
 package com.example.orderService.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,7 +25,8 @@ public class Order {
 
     private String orderNumber;
 
-    @OneToMany(fetch = FetchType.LAZY   )
+    @OneToMany(fetch = FetchType.LAZY)
+    @JsonIgnore
     private List<OrderLineItem> orderLineItemList;
 
 }

@@ -1,12 +1,13 @@
 package com.example.orderService.controller;
 
-import com.example.orderService.dto.OrderDto;
+import com.example.orderService.dto.OrderDTO;
 import com.example.orderService.dto.OrderRequest;
 import com.example.orderService.model.Order;
 import com.example.orderService.service.OrderService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URISyntaxException;
@@ -34,8 +35,8 @@ public class OrderController {
 
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public OrderDto  getOrderById(@PathVariable Long id) {
-        return orderService.getOrderById(id);
+    public ResponseEntity<?> getOrderById(@PathVariable Long id) {
+        return ResponseEntity.ok(orderService.getOrderById(id));
     }
 
 }
